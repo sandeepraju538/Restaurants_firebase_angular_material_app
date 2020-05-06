@@ -25,3 +25,28 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+Project information and steps:
+
+Setup App:
+
+	Angular:
+	1. ng new public-restaurants
+	2. ng add @angular/material
+	3. creating the components, service, module
+		ng generate component restaurants-list
+		ng generate service restaurant
+		ng generate module restaurant
+
+	Firebase:
+	create a new project: restaurants-data
+	create a new database
+	
+	download the dependencies from node package manager by running the command: npm install
+
+Run App:
+
+	npm start or ng serve
+	
+	restaurants-list component will display the list of restaurants with search by name filtering

@@ -1,6 +1,10 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+    "indent": [
+      false,
+      "tabs"
+    ],
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {

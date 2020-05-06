@@ -1,0 +1,50 @@
+<mat-card class="example-card map" *ngIf="!editRestaurant">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image">
+            <img src="{{selectedRestaurant.logo}}" />
+        </div>
+        <mat-card-title>
+            {{selectedRestaurant.name}}
+        </mat-card-title>
+    </mat-card-header>
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" mat-card-image>
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+    <mat-card-content>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="editDetails()">Edit</button>
+        <button mat-button>Like</button>
+    </mat-card-actions>
+</mat-card>
+<mat-card class="example-card editRestaurant" *ngIf="editRestaurant">
+    <form class="example-container" [formGroup]="editForm">
+        Edit Restaurant:
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>latitude</mat-label>
+            <input matInput formControlName="lat">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>longitude</mat-label>
+            <input matInput formControlName="long">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Logo</mat-label>
+            <input matInput formControlName="logo">
+        </mat-form-field>
+    </form>
+    <button [disabled]="editForm.invalid" mat-button (click)="saveDetails()">Save</button>
+
+</mat-card>

@@ -1,0 +1,19 @@
+<mat-card class="example-card restaurant">
+  <mat-form-field class="example-full-width">
+    <mat-label>Restaurant</mat-label>
+    <input matInput placeholder="Enter restaurant name" value="" (input)="textChanged()" [(ngModel)]="searchValue">
+  </mat-form-field>
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-selection-list>
+      <div mat-subheader>Restaurants</div>
+      <mat-list-option *ngFor="let restaurant of restaurants" (click)="restaurantTapped(restaurant)">
+        <mat-icon mat-list-icon>
+          <img src="{{restaurant.logo}}" />
+        </mat-icon>
+        <div mat-line>{{restaurant.name}}</div>
+        <div mat-line> {{restaurant.description}}</div>
+        <mat-divider></mat-divider>
+      </mat-list-option>
+    </mat-selection-list>
+  </div>
+</mat-card>
