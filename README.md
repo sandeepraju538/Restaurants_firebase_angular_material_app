@@ -29,6 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Project information and steps:
 
+used technologies: Angular material, flex-layout, firebase, localstorage
+
 Setup App:
 
 	Angular:
@@ -48,5 +50,5 @@ Setup App:
 Run App:
 
 	npm start or ng serve
-	
-	restaurants-list component will display the list of restaurants with search by name filtering
+	or
+	Hosted: https://sandeepraju538.github.io/RestaurantsAngularMaterialAppHosted
